@@ -17,7 +17,13 @@ class Person {
   String getName(){
     return "Hello, My Name Is $name";
   }
-}
+} 
+
+extension SayGoodByeOnPerson on Person{
+    void sayGoodBye(String paramName){
+      print("Good By $paramName, from $name");
+    }
+  }
 
 void main (){
   var person1 = Person();
@@ -32,6 +38,7 @@ void main (){
 
   person1.sayHello('Muji');
   person1.hello();
+  person1.sayGoodBye("Joko");
 
   var person2 = Person();
   print(person2);
